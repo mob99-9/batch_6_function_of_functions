@@ -7,18 +7,20 @@
 
 user_string = input("Please enter a string: ")
 
+#create another variable for the new string
+
+swapcased_string = ""
+
 #check every character in string and change casing
 
 for char in user_string:
-    if char.islower()== True:
-        letter_location = user_string.index(char)
-        user_string = user_string.replace(char, user_string[letter_location].upper())
+    if char.islower():
+        swapcased_string += char.upper()
     elif char.isupper()== True:
-        location_letter = user_string.index(char)
-        user_string = user_string.replace(char, user_string[letter_location].lower())
+        swapcased_string += char.lower()
     else:
-        None
+        swapcased_string += char
 
-#print user string
+#print the new string string
 
-print(user_string)
+print(swapcased_string)
